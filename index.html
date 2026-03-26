@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stanford Western Civilization — Syllabus</title>
+    <title>Stanford Western Civilization â Syllabus</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -19,53 +19,343 @@
             --bg: #fff;
             --off-white: #fafafa;
         }
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
+
         html { scroll-behavior: smooth; }
-        body { font-family: var(--sans); background: var(--bg); color: var(--black); line-height: 1.6; font-weight: 300; -webkit-font-smoothing: antialiased; }
-        nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); padding: 0 2rem; height: 60px; display: flex; align-items: center; justify-content: space-between; }
-        .nav-brand { font-family: var(--serif); font-size: 1.4rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--black); text-decoration: none; }
-        .nav-links { display: flex; gap: 2rem; list-style: none; }
-        .nav-links a { font-family: var(--sans); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--grey); text-decoration: none; transition: color 0.2s; }
+
+        body {
+            font-family: var(--sans);
+            background: var(--bg);
+            color: var(--black);
+            line-height: 1.6;
+            font-weight: 300;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ââ NAV ââ */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            padding: 0 2rem;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-brand {
+            font-family: var(--serif);
+            font-size: 1.4rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--black);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-family: var(--sans);
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--grey);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
         .nav-links a:hover { color: var(--black); }
-        .hero { margin-top: 60px; position: relative; width: 100%; height: 85vh; min-height: 500px; overflow: hidden; background: #1a1a1a; }
-        .hero img { width: 100%; height: 100%; object-fit: cover; opacity: 0.7; }
-        .hero-overlay { position: absolute; bottom: 0; left: 0; right: 0; padding: 4rem 3rem; background: linear-gradient(transparent, rgba(0,0,0,0.7)); color: white; }
-        .hero-label { font-family: var(--sans); font-size: 0.7rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 1rem; opacity: 0.8; }
-        .hero-title { font-family: var(--serif); font-size: 3.5rem; font-weight: 600; line-height: 1.1; max-width: 700px; margin-bottom: 1rem; }
-        .hero-subtitle { font-family: var(--sans); font-size: 1rem; font-weight: 300; max-width: 550px; line-height: 1.7; opacity: 0.85; }
-        .intro-section { max-width: 720px; margin: 4rem auto; padding: 0 2rem; text-align: center; }
-        .intro-section p { font-family: var(--serif); font-size: 1.35rem; line-height: 1.8; color: var(--dark); font-style: italic; }
-        .divider { width: 60px; height: 1px; background: var(--black); margin: 3rem auto; }
-        .era-section { max-width: 1100px; margin: 0 auto 4rem; padding: 0 2rem; }
-        .era-header { text-align: center; margin-bottom: 3rem; }
-        .era-number { font-family: var(--sans); font-size: 0.7rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--light-grey); margin-bottom: 0.5rem; }
-        .era-title { font-family: var(--serif); font-size: 2.4rem; font-weight: 600; color: var(--black); }
-        .entries-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; }
-        .entry-card { background: var(--bg); border: 1px solid var(--border); overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; }
-        .entry-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.1); }
-        .entry-image { width: 100%; height: 280px; overflow: hidden; background: #f0f0f0; }
-        .entry-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
-        .entry-card:hover .entry-image img { transform: scale(1.05); }
-        .entry-body { padding: 1.5rem; }
-        .entry-num { font-family: var(--sans); font-size: 0.65rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--light-grey); margin-bottom: 0.5rem; }
-        .entry-title { font-family: var(--serif); font-size: 1.5rem; font-weight: 600; color: var(--black); line-height: 1.3; margin-bottom: 0.25rem; }
-        .entry-author { font-family: var(--sans); font-size: 0.8rem; color: var(--light-grey); font-weight: 400; margin-bottom: 0.75rem; }
-        .entry-desc { font-family: var(--sans); font-size: 0.88rem; color: var(--grey); line-height: 1.65; font-weight: 300; margin-bottom: 1.2rem; }
-        .entry-link { font-family: var(--sans); font-size: 0.7rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--black); text-decoration: none; border-bottom: 1px solid var(--black); padding-bottom: 2px; transition: opacity 0.2s; }
+
+        /* ââ HERO ââ */
+        .hero {
+            margin-top: 60px;
+            position: relative;
+            width: 100%;
+            height: 85vh;
+            min-height: 500px;
+            overflow: hidden;
+            background: #1a1a1a;
+        }
+
+        .hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.7;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 4rem 3rem;
+            background: linear-gradient(transparent, rgba(0,0,0,0.7));
+            color: white;
+        }
+
+        .hero-label {
+            font-family: var(--sans);
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            opacity: 0.8;
+        }
+
+        .hero-title {
+            font-family: var(--serif);
+            font-size: 3.5rem;
+            font-weight: 600;
+            line-height: 1.1;
+            max-width: 700px;
+            margin-bottom: 1rem;
+        }
+
+        .hero-subtitle {
+            font-family: var(--sans);
+            font-size: 1rem;
+            font-weight: 300;
+            max-width: 550px;
+            line-height: 1.7;
+            opacity: 0.85;
+        }
+
+        /* ââ INTRO ââ */
+        .intro-section {
+            max-width: 720px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+            text-align: center;
+        }
+
+        .intro-section p {
+            font-family: var(--serif);
+            font-size: 1.35rem;
+            line-height: 1.8;
+            color: var(--dark);
+            font-style: italic;
+        }
+
+        .divider {
+            width: 60px;
+            height: 1px;
+            background: var(--black);
+            margin: 3rem auto;
+        }
+
+        /* ââ ERA SECTIONS ââ */
+        .era-section {
+            max-width: 1100px;
+            margin: 0 auto 4rem;
+            padding: 0 2rem;
+        }
+
+        .era-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .era-number {
+            font-family: var(--sans);
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--light-grey);
+            margin-bottom: 0.5rem;
+        }
+
+        .era-title {
+            font-family: var(--serif);
+            font-size: 2.4rem;
+            font-weight: 600;
+            color: var(--black);
+        }
+
+        /* ââ ENTRIES GRID ââ */
+        .entries-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .entry-card {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .entry-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+        }
+
+        .entry-image {
+            width: 100%;
+            height: 280px;
+            overflow: hidden;
+            background: #f0f0f0;
+        }
+
+        .entry-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .entry-card:hover .entry-image img {
+            transform: scale(1.05);
+        }
+
+        .entry-body {
+            padding: 1.5rem;
+        }
+
+        .entry-num {
+            font-family: var(--sans);
+            font-size: 0.65rem;
+            font-weight: 500;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--light-grey);
+            margin-bottom: 0.5rem;
+        }
+
+        .entry-title {
+            font-family: var(--serif);
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--black);
+            line-height: 1.3;
+            margin-bottom: 0.25rem;
+        }
+
+        .entry-author {
+            font-family: var(--sans);
+            font-size: 0.8rem;
+            color: var(--light-grey);
+            font-weight: 400;
+            margin-bottom: 0.75rem;
+        }
+
+        .entry-desc {
+            font-family: var(--sans);
+            font-size: 0.88rem;
+            color: var(--grey);
+            line-height: 1.65;
+            font-weight: 300;
+            margin-bottom: 1.2rem;
+        }
+
+        .entry-link {
+            font-family: var(--sans);
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--black);
+            text-decoration: none;
+            border-bottom: 1px solid var(--black);
+            padding-bottom: 2px;
+            transition: opacity 0.2s;
+        }
+
         .entry-link:hover { opacity: 0.6; }
-        .feature { max-width: 1100px; margin: 0 auto 4rem; padding: 0 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 0; border: 1px solid var(--border); overflow: hidden; }
-        .feature-image { height: 100%; min-height: 400px; overflow: hidden; }
-        .feature-image img { width: 100%; height: 100%; object-fit: cover; }
-        .feature-body { padding: 3rem; display: flex; flex-direction: column; justify-content: center; }
-        footer { border-top: 1px solid var(--border); padding: 3rem 2rem; text-align: center; }
-        .footer-brand { font-family: var(--serif); font-size: 1.2rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1rem; }
-        footer p { font-family: var(--sans); font-size: 0.75rem; color: var(--light-grey); line-height: 1.8; }
-        footer a { color: var(--grey); text-decoration: none; border-bottom: 1px solid var(--border); }
+
+        /* ââ FEATURE (wide) ââ */
+        .feature {
+            max-width: 1100px;
+            margin: 0 auto 4rem;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            border: 1px solid var(--border);
+            overflow: hidden;
+        }
+
+        .feature-image {
+            height: 100%;
+            min-height: 400px;
+            overflow: hidden;
+        }
+
+        .feature-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .feature-body {
+            padding: 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* ââ FOOTER ââ */
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .footer-brand {
+            font-family: var(--serif);
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        footer p {
+            font-family: var(--sans);
+            font-size: 0.75rem;
+            color: var(--light-grey);
+            line-height: 1.8;
+        }
+
+        footer a {
+            color: var(--grey);
+            text-decoration: none;
+            border-bottom: 1px solid var(--border);
+        }
+
         footer a:hover { color: var(--black); }
-        @media (max-width: 768px) { .hero-title { font-size: 2.2rem; } .hero-overlay { padding: 2rem 1.5rem; } .feature { grid-template-columns: 1fr; } .feature-image { min-height: 300px; } .nav-links { display: none; } .entries-grid { grid-template-columns: 1fr; } .era-title { font-size: 1.8rem; } }
+
+        /* ââ RESPONSIVE ââ */
+        @media (max-width: 768px) {
+            .hero-title { font-size: 2.2rem; }
+            .hero-overlay { padding: 2rem 1.5rem; }
+            .feature { grid-template-columns: 1fr; }
+            .feature-image { min-height: 300px; }
+            .nav-links { display: none; }
+            .entries-grid { grid-template-columns: 1fr; }
+            .era-title { font-size: 1.8rem; }
+        }
     </style>
 </head>
 <body>
+
+<!-- ââ NAVIGATION ââ -->
 <nav>
     <a href="#" class="nav-brand">Stanford Western Civ</a>
     <ul class="nav-links">
@@ -77,74 +367,306 @@
         <li><a href="#modern">Modern</a></li>
     </ul>
 </nav>
+
+<!-- ââ HERO ââ -->
 <section class="hero">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/%22The_School_of_Athens%22_by_Raffaello_Sanzio_da_Urbino.jpg/1400px-%22The_School_of_Athens%22_by_Raffaello_Sanzio_da_Urbino.jpg" alt="The School of Athens by Raphael">
+    <img referrerpolicy="no-referrer" loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/%22The_School_of_Athens%22_by_Raffaello_Sanzio_da_Urbino.jpg/1400px-%22The_School_of_Athens%22_by_Raffaello_Sanzio_da_Urbino.jpg" alt="The School of Athens by Raphael">
     <div class="hero-overlay">
-        <div class="hero-label">The Syllabus · Est. 1935</div>
+        <div class="hero-label">The Syllabus &middot; Est. 1935</div>
         <h1 class="hero-title">Stanford Western Civilization</h1>
-        <p class="hero-subtitle">The fifteen canonical texts that shaped a generation of undergraduates — from Genesis to Freud, the course that defined liberal education.</p>
+        <p class="hero-subtitle">The fifteen canonical texts that shaped a generation of undergraduates &mdash; from Genesis to Freud, the course that defined liberal education.</p>
     </div>
 </section>
+
+<!-- ââ INTRO ââ -->
 <div class="intro-section">
-    <p>Stanford’s History of Western Civilization began in 1935 and ran for over three decades as a required freshman survey. In 1980 it was reborn as the Western Culture program, built around fifteen canonical texts that every undergraduate read.</p>
+    <p>Stanford's History of Western Civilization began in 1935 and ran for over three decades as a required freshman survey. In 1980 it was reborn as the Western Culture program, built around fifteen canonical texts that every undergraduate read.</p>
 </div>
+
 <div class="divider"></div>
+
+<!-- âââââââââââ I. ANCIENT WORLD âââââââââââ -->
 <section class="era-section" id="ancient">
-    <div class="era-header"><div class="era-number">Part I</div><h2 class="era-title">The Ancient World</h2></div>
+    <div class="era-header">
+        <div class="era-number">Part I</div>
+        <h2 class="era-title">The Ancient World</h2>
+    </div>
+
     <div class="entries-grid">
-        <div class="entry-card"><div class="entry-image"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Michelangelo_-_Creation_of_Adam_%28cropped%29.jpg/1200px-Michelangelo_-_Creation_of_Adam_%28cropped%29.jpg" alt="Creation of Adam by Michelangelo"></div><div class="entry-body"><div class="entry-num">Text No. 1</div><div class="entry-title">Hebrew Bible — Genesis</div><div class="entry-author">Traditional / various authors</div><p class="entry-desc">The foundational narrative of creation, covenant, and the origins of the Israelite people; a cornerstone of Western moral and literary tradition.</p><a class="entry-link" href="https://grokipedia.com/page/Book_of_Genesis" target="_blank" rel="noopener">Read on Grokipedia →</a></div></div>
-        <div class="entry-card"><div class="entry-image"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Homer_British_Museum.jpg/800px-Homer_British_Museum.jpg" alt="Bust of Homer"></div><div class="entry-body"><div class="entry-num">Text No. 2</div><div class="entry-title">The Iliad &amp; The Odyssey</div><div class="entry-author">Homer (c. 8th century BCE)</div><p class="entry-desc">The epic poems that defined heroism, fate, and the human condition for the ancient Greeks and all of Western literature thereafter.</p><a class="entry-link" href="https://grokipedia.com/page/Homer" target="_blank" rel="noopener">Read on Grokipedia →</a></div></div>
-        <div class="entry-card"><div class="entry-image"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Epidaurus_Theater.jpg/1200px-Epidaurus_Theater.jpg" alt="Ancient Theatre of Epidaurus"></div><div class="entry-body"><div class="entry-num">Text No. 3</div><div class="entry-title">Greek Tragedy</div><div class="entry-author">Aeschylus, Sophocles, or Euripides (5th century BCE)</div><p class="entry-desc">At least one major tragedy — exploring justice, hubris, and the limits of human agency on the Athenian stage.</p><a class="entry-link" href="https://grokipedia.com/page/Greek_tragedy" target="_blank" rel="noopener">Read on Grokipedia →</a></div></div>
+
+        <div class="entry-card">
+            <div class="entry-image">
+                <img referrerpolicy="no-referrer" loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Michelangelo_-_Creation_of_Adam_%28cropped%29.jpg/1200px-Michelangelo_-_Creation_of_Adam_%28cropped%29.jpg" alt="Creation of Adam by Michelangelo">
+            </div>
+            <div class="entry-body">
+                <div class="entry-num">Text No. 1</div>
+                <div class="entry-title">Hebrew Bible &mdash; Genesis</div>
+                <div class="entry-author">Traditional / various authors</div>
+                <p class="entry-desc">The foundational narrative of creation, covenant, and the origins of the Israelite people; a cornerstone of Western moral and literary tradition.</p>
+                <a class="entry-link" href="https://grokipedia.com/page/Book_of_Genesis" target="_blank" rel="noopener">Read on Grokipedia &rarr;</a>
+            </div>
+        </div>
+
+        <div class="entry-card">
+            <div class="entry-image">
+                <img referrerpolicy="no-referrer" loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Homer_British_Museum.jpg/800px-Homer_British_Museum.jpg" alt="Bust of Homer, British Museum">
+            </div>
+            <div class="entry-body">
+                <div class="entry-num">Text No. 2</div>
+                <div class="entry-title">The Iliad &amp; The Odyssey</div>
+                <div class="entry-author">Homer (c. 8th century BCE)</div>
+                <p class="entry-desc">The epic poems that defined heroism, fate, and the human condition for the ancient Greeks and all of Western literature thereafter.</p>
+                <a class="entry-link" href="https://grokipedia.com/page/Homer" target="_blank" rel="noopener">Read on Grokipedia &rarr;</a>
+            </div>
+        </div>
+
+        <div class="entry-card">
+            <div class="entry-image">
+                <img referrerpolicy="no-referrer" loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Epidaurus_Theater.jpg/1200px-Epidaurus_Theater.jpg" alt="Ancient Theatre of Epidaurus">
+            </div>
+            <div class="entry-body">
+                <div class="entry-num">Text No. 3</div>
+                <div class="entry-title">Greek Tragedy</div>
+                <div class="entry-author">Aeschylus, Sophocles, or Euripides (5th century BCE)</div>
+                <p class="entry-desc">At least one major tragedy &mdash; exploring justice, hubris, and the limits of human agency on the Athenian stage.</p>
+                <a class="entry-link" href="https://grokipedia.com/page/Greek_tragedy" target="_blank" rel="noopener">Read on Grokipedia &rarr;</a>
+            </div>
+        </div>
+
     </div>
 </section>
+
+<!-- Feature: Plato -->
 <section class="feature">
-    <div class="feature-image"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Plato_Silanion_Musei_Capitolini_MC1377.jpg/800px-Plato_Silanion_Musei_Capitolini_MC1377.jpg" alt="Bust of Plato"></div>
-    <div class="feature-body"><div class="entry-num">Text No. 4</div><div class="entry-title" style="font-size:2rem;margin-bottom:0.5rem">Republic (Books I–VII)</div><div class="entry-author">Plato (c. 375 BCE)</div><p class="entry-desc">Plato’s dialogue on justice, the ideal state, and the Allegory of the Cave — the single most influential work of Western philosophy.</p><a class="entry-link" href="https://grokipedia.com/page/Republic_(Plato)" target="_blank" rel="noopener">Read on Grokipedia →</a></div>
+    <div class="feature-image">
+        <img referrerpolicy="no-referrer" loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Plato_Silanion_Musei_Capitolini_MC1377.jpg/800px-Plato_Silanion_Musei_Capitolini_MC1377.jpg" alt="Bust of Plato">
+    </div>
+    <div class="feature-body">
+        <div class="entry-num">Text No. 4</div>
+        <div class="entry-title" style="font-size:2rem; margin-bottom:0.5rem;">Republic (Books I&ndash;VII)</div>
+        <div class="entry-author">Plato (c. 375 BCE)</div>
+        <p class="entry-desc">Plato's dialogue on justice, the ideal state, and the Allegory of the Cave &mdash; the single most influential work of Western philosophy.</p>
+        <a class="entry-link" href="https://grokipedia.com/page/Republic_(Plato)" target="_blank" rel="noopener">Read on Grokipedia &rarr;</a>
+    </div>
 </section>
-<div class="era-section"><div class="entries-grid">
-    <div class="entry-card"><div class="entry-image"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Sermon_on_the_Mount_Fra_Angelico.jpg/1200px-Sermon_on_the_Mount_Fra_Angelico.jpg" alt="Sermon on the Mount by Fra Angelico"></div><div class="entry-body"><div class="entry-num">Text No. 5</div><div class="entry-title">New Testament — Selections</div><div class="entry-author">Various authors (1st century CE)</div><p class="entry-desc">Gospels and epistles that articulated the ethical vision of early Christianity and reshaped the Roman world.</p><a class="entry-link" href="https://grokipedia.com/page/New_Testament" target="_blank" rel="noopener">Read on Grokipedia →</a></div></div>
-</div></div>
+
+<div class="era-section">
+    <div class="entries-grid">
+        <div class="entry-card">
+            <div class="entry-image">
+                <img referrerpolicy="no-referrer" loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Sermon_on_the_Mount_Fra_Angelico.jpg/1200px-Sermon_on_the_Mount_Fra_Angelico.jpg" alt="Sermon on the Mount by Fra Angelico">
+            </div>
+            <div class="entry-body">
+                <div class="entry-num">Text No. 5</div>
+                <div class="entry-title">New Testament &mdash; Selections</div>
+                <div class="entry-author">Various authors (1st century CE)</div>
+                <p class="entry-desc">Gospels and epistles that articulated the ethical vision of early Christianity and reshaped the Roman world.</p>
+                <a class="entry-link" href="https://grokipedia.com/page/New_Testament" target="_blank" rel="noopener">Read on Grokipedia &rarr;</a>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="divider"></div>
+
+<!-- âââââââââââ II. MEDIEVAL âââââââââââ -->
 <section class="era-section" id="medieval">
-    <div class="era-header"><div class="era-number">Part II</div><h2 class="era-title">The Medieval World</h2></div>
+    <div class="era-header">
+        <div class="era-number">Part II</div>
+        <h2 class="era-title">The Medieval World</h2>
+    </div>
+
     <div class="entries-grid">
-        <div class="entry-card"><div class="entry-image"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Sandro_Botticelli_-_St_Augustin_dans_son_cabinet_de_travail.jpg/800px-Sandro_Botticelli_-_St_Augustin_dans_son_cabinet_de_travail.jpg" alt="St. Augustine by Botticelli"></div><div class="entry-body"><div class="entry-num">Text No. 6</div><div class="entry-title">Confessions (Books I–IX)</div><div class="entry-author">Augustine of Hippo (c. 397 CE)</div><p class="entry-desc">The first great autobiography in the Western tradition — a story of intellectual conversion that bridged classical philosophy and Christian theology.</p><a class="entry-link" href="https://grokipedia.com/page/Confessions_(Augustine)" target="_blank" rel="noopener">Read on Grokipedia →</a></div></div>
-        <div class="entry-card"><div class="entry-image"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Gustave_Dor%C3%A9_-_Dante_Alighieri_-_Inferno_-_Plate_8_%28Canto_III_-_Charon%29.jpg/800px-Gustave_Dor%C3%A9_-_Dante_Alighieri_-_Inferno_-_Plate_8_%28Canto_III_-_Charon%29.jpg" alt="Dante Inferno by Doré"></div><div class="entry-body"><div class="entry-num">Text No. 7</div><div class="entry-title">Inferno</div><div class="entry-author">Dante Alighieri (c. 1314)</div><p class="entry-desc">The first canticle of the Divine Comedy — a harrowing descent through Hell that synthesised classical and Christian visions of the moral universe.</p><a class="entry-link" href="https://grokipedia.com/page/Inferno_(Dante)" target="_blank" rel="noopener">Read on Grokipedia →</a></div></div>
+
+        <div class="entry-card">
+            <div class="entry-image">
+                <img referrerpolicy="no-referrer" loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Sandro_Botticelli_-_St_Augustin_dans_son_cabinet_de_travail.jpg/800px-Sandro_Botticelli_-_St_Augustin_dans_son_cabinet_de_travail.jpg" alt="St. Augustine in His Study by Botticelli">
+            </div>
+            <div class="entry-body">
+                <div class="entry-num">Text No. 6</div>
+                <div class="entry-title">Confessions (Books I&ndash;IX)</div>
+                <div class="entry-author">Augustine of Hippo (c. 397 CE)</div>
+                <p class="entry-desc">The first great autobiography in the Western tradition &mdash; a story of intellectual conversion that bridged classical philosophy and Christian theology.</p>
+                <a class="entry-link" href="https://grokipedia.com/page/Confessions_(Augustine)" target="_blank" rel="noopener">Read on Grokipedia &rarr;</a>
+            </div>
+        </div>
+
+        <div class="entry-card">
+            <div class="entry-image">
+                <img referrerpolicy="no-referrer" loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Gustave_Dor%C3%A9_-_Dante_Alighieri_-_Inferno_-_Plate_8_%28Canto_III_-_Charon%29.jpg/800px-Gustave_Dor%C3%A9_-_Dante_Alighieri_-_Inferno_-_Plate_8_%28Canto_III_-_Charon%29.jpg" alt="Dante's Inferno illustration by Gustave DorÃ©">
+            </div>
+            <div class="entry-body">
+                <div class="entry-num">Text No. 7</div>
+                <div class="entry-title">Inferno</div>
+                <div class="entry-author">Dante Alighieri (c. 1314)</div>
+                <p class="entry-desc">The first canticle of the Divine Comedy &mdash; a harrowing descent through Hell that synthesised classical and Christian visions of the moral universe.</p>
+                <a class="entry-link" href="https://grokipedia.com/page/Inferno_(Dante)" target="_blank" rel="noopener">Read on Grokipedia &rarr;</a>
+            </div>
+        </div>
+
     </div>
 </section>
+
 <div class="divider"></div>
+
+<!-- âââââââââââ III. RENAISSANCE & REFORMATION âââââââââââ -->
 <section class="era-section" id="renaissance">
-    <div class="era-header"><div class="era-number">Part III</div><h2 class="era-title">Renaissance &amp; Reformation</h2></div>
+    <div class="era-header">
+        <div class="era-number">Part III</div>
+        <h2 class="era-title">Renaissance &amp; Reformation</h2>
+    </div>
+
     <div class="entries-grid">
-        <div class="entry-card"><div class="entry-image"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Ambrosius_Holbein_-_Portrait_of_Thomas_More_-_1527.jpg/800px-Ambrosius_Holbein_-_Portrait_of_Thomas_More_-_1527.jpg" alt="Portrait of Thomas More"></div><div class="entry-body"><div class="entry-num">Text No. 8</div><div class="entry-title">Utopia</div><div class="entry-author">Thomas More (1516)</div><p class="entry-desc">More’s witty thought experiment about an ideal commonwealth — a founding text of both political philosophy and the utopian literary tradition.</p><a class="entry-link" href="https://grokipedia.com/page/Utopia_(book)" target="_blank" rel="noopener">Read on Grokipedia →</a></div></div>
-        <div class="entry-card"><div class="entry-image"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Portrait_of_Niccol%C3%B2_Machiavelli_by_Santi_di_Tito.jpg/800px-Portrait_of_Niccol%C3%B2_Machiavelli_by_Santi_di_Tito.jpg" alt="Portrait of Machiavelli"></div><div class="entry-body"><div class="entry-num">Text No. 9</div><div class="entry-title">The Prince</div><div class="entry-author">Niccolò Machiavelli (1532)</div><p class="entry-desc">The treatise that divorced politics from morality and launched modern political science.</p><a class="entry-link" href="https://grokipedia.com/page/The_Prince" target="_blank" rel="noopener">Read on Grokipedia →</a></div></div>
-        <div class="entry-card"><div class="entry-image"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Lucas_Cranach_d.%C3%84._-_Martin_Luther%2C_1528_%28Veste_Coburg%29.jpg/800px-Lucas_Cranach_d.%C3%84._-_Martin_Luther%2C_1528_%28Veste_Coburg%29.jpg" alt="Martin Luther by Cranach"></div><div class="entry-body"><div class="entry-num">Text No. 10</div><div class="entry-title">On Christian Liberty</div><div class="entry-author">Martin Luther (1520)</div><p class="entry-desc">Luther’s manifesto on faith and freedom that ignited the Protestant Reformation and fractured Christendom.</p><a class="entry-link" href="https://grokipedia.com/page/Martin_Luther" target="_blank" rel="noopener">Read on Grokipedia →</a></div></div>
+
+        <div class="entry-card">
+            <div class="entry-image">
+                <img referrerpolicy="no-referrer" loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Ambrosius_Holbein_-_Portrait_of_Thomas_More_-_1527.jpg/800px-Ambrosius_Holbein_-_Portrait_of_Thomas_More_-_1527.jpg" alt="Portrait of Thomas More">
+            </div>
+            <div class="entry-body">
+                <div class="entry-num">Text No. 8</div>
+                <div class="entry-title">Utopia</div>
+                <div class="entry-author">Thomas More (1516)</div>
+                <p class="entry-desc">More's witty thought experiment about an ideal commonwealth &mdash; a founding text of both political philosophy and the utopian literary tradition.</p>
+                <a class="entry-link" href="https://grokipedia.com/page/Utopia_(book)" target="_blank" rel="noopener">Read on Grokipedia &rarr;</a>
+            </div>
+        </div>
+
+        <div class="entry-card">
+            <div class="entry-image">
+                <img referrerpolicy="no-referrer" loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Portrait_of_Niccol%C3%B2_Machiavelli_by_Santi_di_Tito.jpg/800px-Portrait_of_Niccol%C3%B2_Machiavelli_by_Santi_di_Tito.jpg" alt="Portrait of Machiavelli by Santi di Tito">
+            </div>
+            <div class="entry-body">
+                <div class="entry-num">Text No. 9</div>
+                <div class="entry-title">The Prince</div>
+                <div class="entry-author">Niccol&ograve; Machiavelli (1532)</div>
+                <p class="entry-desc">The treatise that divorced politics from morality and launched modern political science.</p>
+                <a class="entry-link" href="https://grokipedia.com/page/The_Prince" target="_blank" rel="noopener">Read on Grokipedia &rarr;</a>
+            </div>
+        </div>
+
+        <div class="entry-card">
+            <div class="entry-image">
+                <img referrerpolicy="no-referrer" loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Lucas_Cranach_d.%C3%84._-_Martin_Luther%2C_1528_%28Veste_Coburg%29.jpg/800px-Lucas_Cranach_d.%C3%84._-_Martin_Luther%2C_1528_%28Veste_Coburg%29.jpg" alt="Portrait of Martin Luther by Lucas Cranach">
+            </div>
+            <div class="entry-body">
+                <div class="entry-num">Text No. 10</div>
+                <div class="entry-title">On Christian Liberty</div>
+                <div class="entry-author">Martin Luther (1520)</div>
+                <p class="entry-desc">Luther's manifesto on faith and freedom that ignited the Protestant Reformation and fractured Christendom.</p>
+                <a class="entry-link" href="https://grokipedia.com/page/Martin_Luther" target="_blank" rel="noopener">Read on Grokipedia &rarr;</a>
+            </div>
+        </div>
+
     </div>
 </section>
+
 <div class="divider"></div>
-<section id="scientific"><section class="feature">
-    <div class="feature-image"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Justus_Sustermans_-_Portrait_of_Galileo_Galilei%2C_1636.jpg/800px-Justus_Sustermans_-_Portrait_of_Galileo_Galilei%2C_1636.jpg" alt="Portrait of Galileo"></div>
-    <div class="feature-body"><div class="era-number" style="margin-bottom:1rem">Part IV · The Scientific Revolution</div><div class="entry-num">Text No. 11</div><div class="entry-title" style="font-size:2rem;margin-bottom:0.5rem">The Starry Messenger &amp; The Assayer</div><div class="entry-author">Galileo Galilei (1610 / 1623)</div><p class="entry-desc">Galileo’s reports of telescopic discovery and his defence of empirical method — founding documents of modern science.</p><a class="entry-link" href="https://grokipedia.com/page/Galileo_Galilei" target="_blank" rel="noopener">Read on Grokipedia →</a></div>
-</section></section>
+
+<!-- âââââââââââ IV. SCIENTIFIC REVOLUTION âââââââââââ -->
+<section id="scientific">
+    <section class="feature">
+        <div class="feature-image">
+            <img referrerpolicy="no-referrer" loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Justus_Sustermans_-_Portrait_of_Galileo_Galilei%2C_1636.jpg/800px-Justus_Sustermans_-_Portrait_of_Galileo_Galilei%2C_1636.jpg" alt="Portrait of Galileo by Justus Sustermans">
+        </div>
+        <div class="feature-body">
+            <div class="era-number" style="margin-bottom:1rem;">Part IV &middot; The Scientific Revolution</div>
+            <div class="entry-num">Text No. 11</div>
+            <div class="entry-title" style="font-size:2rem; margin-bottom:0.5rem;">The Starry Messenger &amp; The Assayer</div>
+            <div class="entry-author">Galileo Galilei (1610 / 1623)</div>
+            <p class="entry-desc">Galileo's reports of telescopic discovery and his defence of empirical method &mdash; founding documents of modern science.</p>
+            <a class="entry-link" href="https://grokipedia.com/page/Galileo_Galilei" target="_blank" rel="noopener">Read on Grokipedia &rarr;</a>
+        </div>
+    </section>
+</section>
+
 <div class="divider"></div>
+
+<!-- âââââââââââ V. ENLIGHTENMENT âââââââââââ -->
 <section class="era-section" id="enlightenment">
-    <div class="era-header"><div class="era-number">Part V</div><h2 class="era-title">The Enlightenment</h2></div>
+    <div class="era-header">
+        <div class="era-number">Part V</div>
+        <h2 class="era-title">The Enlightenment</h2>
+    </div>
+
     <div class="entries-grid">
-        <div class="entry-card"><div class="entry-image"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/D%27apr%C3%A8s_Maurice_Quentin_de_La_Tour%2C_Portrait_de_Voltaire%2C_d%C3%A9tail_du_visage_%28ch%C3%A2teau_de_Ferney%29.jpg/800px-D%27apr%C3%A8s_Maurice_Quentin_de_La_Tour%2C_Portrait_de_Voltaire%2C_d%C3%A9tail_du_visage_%28ch%C3%A2teau_de_Ferney%29.jpg" alt="Portrait of Voltaire"></div><div class="entry-body"><div class="entry-num">Text No. 12</div><div class="entry-title">Candide</div><div class="entry-author">Voltaire (1759)</div><p class="entry-desc">A satirical novella that skewered philosophical optimism and religious hypocrisy across four continents.</p><a class="entry-link" href="https://grokipedia.com/page/Candide" target="_blank" rel="noopener">Read on Grokipedia →</a></div></div>
+        <div class="entry-card">
+            <div class="entry-image">
+                <img referrerpolicy="no-referrer" loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/D%27apr%C3%A8s_Maurice_Quentin_de_La_Tour%2C_Portrait_de_Voltaire%2C_d%C3%A9tail_du_visage_%28ch%C3%A2teau_de_Ferney%29.jpg/800px-D%27apr%C3%A8s_Maurice_Quentin_de_La_Tour%2C_Portrait_de_Voltaire%2C_d%C3%A9tail_du_visage_%28ch%C3%A2teau_de_Ferney%29.jpg" alt="Portrait of Voltaire">
+            </div>
+            <div class="entry-body">
+                <div class="entry-num">Text No. 12</div>
+                <div class="entry-title">Candide</div>
+                <div class="entry-author">Voltaire (1759)</div>
+                <p class="entry-desc">A satirical novella that skewered philosophical optimism and religious hypocrisy across four continents.</p>
+                <a class="entry-link" href="https://grokipedia.com/page/Candide" target="_blank" rel="noopener">Read on Grokipedia &rarr;</a>
+            </div>
+        </div>
     </div>
 </section>
+
 <div class="divider"></div>
+
+<!-- âââââââââââ VI. THE MODERN AGE âââââââââââ -->
 <section class="era-section" id="modern">
-    <div class="era-header"><div class="era-number">Part VI</div><h2 class="era-title">The Modern Age</h2></div>
+    <div class="era-header">
+        <div class="era-number">Part VI</div>
+        <h2 class="era-title">The Modern Age</h2>
+    </div>
+
     <div class="entries-grid">
-        <div class="entry-card"><div class="entry-image"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Karl_Marx_001.jpg/800px-Karl_Marx_001.jpg" alt="Karl Marx"></div><div class="entry-body"><div class="entry-num">Text No. 13</div><div class="entry-title">The Communist Manifesto</div><div class="entry-author">Karl Marx &amp; Friedrich Engels (1848)</div><p class="entry-desc">The pamphlet that crystallised class struggle as the engine of history and shaped revolutionary politics worldwide.</p><a class="entry-link" href="https://grokipedia.com/page/The_Communist_Manifesto" target="_blank" rel="noopener">Read on Grokipedia →</a></div></div>
-        <div class="entry-card"><div class="entry-image"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Charles_Darwin_seated_crop.jpg/800px-Charles_Darwin_seated_crop.jpg" alt="Charles Darwin"></div><div class="entry-body"><div class="entry-num">Text No. 14</div><div class="entry-title">On the Origin of Species</div><div class="entry-author">Charles Darwin (1859)</div><p class="entry-desc">Darwin’s theory of natural selection — a revolution in biology that transformed humanity’s understanding of its place in nature.</p><a class="entry-link" href="https://grokipedia.com/page/On_the_Origin_of_Species" target="_blank" rel="noopener">Read on Grokipedia →</a></div></div>
-        <div class="entry-card"><div class="entry-image"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Sigmund_Freud%2C_by_Max_Halberstadt_%28cropped%29.jpg/800px-Sigmund_Freud%2C_by_Max_Halberstadt_%28cropped%29.jpg" alt="Sigmund Freud"></div><div class="entry-body"><div class="entry-num">Text No. 15</div><div class="entry-title">Civilization and Its Discontents</div><div class="entry-author">Sigmund Freud (1930)</div><p class="entry-desc">Freud’s meditation on the tension between individual desire and the demands of civilised society — the syllabus’s capstone on modernity.</p><a class="entry-link" href="https://grokipedia.com/page/Civilization_and_Its_Discontents" target="_blank" rel="noopener">Read on Grokipedia →</a></div></div>
+
+        <div class="entry-card">
+            <div class="entry-image">
+                <img referrerpolicy="no-referrer" loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Karl_Marx_001.jpg/800px-Karl_Marx_001.jpg" alt="Portrait of Karl Marx">
+            </div>
+            <div class="entry-body">
+                <div class="entry-num">Text No. 13</div>
+                <div class="entry-title">The Communist Manifesto</div>
+                <div class="entry-author">Karl Marx &amp; Friedrich Engels (1848)</div>
+                <p class="entry-desc">The pamphlet that crystallised class struggle as the engine of history and shaped revolutionary politics worldwide.</p>
+                <a class="entry-link" href="https://grokipedia.com/page/The_Communist_Manifesto" target="_blank" rel="noopener">Read on Grokipedia &rarr;</a>
+            </div>
+        </div>
+
+        <div class="entry-card">
+            <div class="entry-image">
+                <img referrerpolicy="no-referrer" loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Charles_Darwin_seated_crop.jpg/800px-Charles_Darwin_seated_crop.jpg" alt="Portrait of Charles Darwin">
+            </div>
+            <div class="entry-body">
+                <div class="entry-num">Text No. 14</div>
+                <div class="entry-title">On the Origin of Species</div>
+                <div class="entry-author">Charles Darwin (1859)</div>
+                <p class="entry-desc">Darwin's theory of natural selection &mdash; a revolution in biology that transformed humanity's understanding of its place in nature.</p>
+                <a class="entry-link" href="https://grokipedia.com/page/On_the_Origin_of_Species" target="_blank" rel="noopener">Read on Grokipedia &rarr;</a>
+            </div>
+        </div>
+
+        <div class="entry-card">
+            <div class="entry-image">
+                <img referrerpolicy="no-referrer" loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Sigmund_Freud%2C_by_Max_Halberstadt_%28cropped%29.jpg/800px-Sigmund_Freud%2C_by_Max_Halberstadt_%28cropped%29.jpg" alt="Portrait of Sigmund Freud by Max Halberstadt">
+            </div>
+            <div class="entry-body">
+                <div class="entry-num">Text No. 15</div>
+                <div class="entry-title">Civilization and Its Discontents</div>
+                <div class="entry-author">Sigmund Freud (1930)</div>
+                <p class="entry-desc">Freud's meditation on the tension between individual desire and the demands of civilised society &mdash; the syllabus's capstone on modernity.</p>
+                <a class="entry-link" href="https://grokipedia.com/page/Civilization_and_Its_Discontents" target="_blank" rel="noopener">Read on Grokipedia &rarr;</a>
+            </div>
+        </div>
+
     </div>
 </section>
+
+<!-- ââ FOOTER ââ -->
 <footer>
     <div class="footer-brand">Stanford Western Civ</div>
-    <p>Based on Stanford University’s Western Culture core reading list (1980–1988).<br>Encyclopedia links point to <a href="https://grokipedia.com" target="_blank" rel="noopener">Grokipedia</a>.<br>Sources: <a href="https://web.stanford.edu/dept/news/stanfordtoday/ed/9705/9705ncf1.html" target="_blank" rel="noopener">Stanford Today</a> · <a href="https://www.historians.org/perspectives-article/inside-the-stanford-mind/" target="_blank" rel="noopener">AHA — Inside the Stanford Mind</a></p>
+    <p>
+        Based on Stanford University's Western Culture core reading list (1980&ndash;1988).<br>
+        Encyclopedia links point to <a href="https://grokipedia.com" target="_blank" rel="noopener">Grokipedia</a>.<br>
+        Sources: <a href="https://web.stanford.edu/dept/news/stanfordtoday/ed/9705/9705ncf1.html" target="_blank" rel="noopener">Stanford Today</a>
+        &middot; <a href="https://www.historians.org/perspectives-article/inside-the-stanford-mind/" target="_blank" rel="noopener">AHA &mdash; Inside the Stanford Mind</a>
+    </p>
 </footer>
+
 </body>
-                                                                                                                                                                                                                  </html>
+</html>
